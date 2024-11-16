@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# How to start this app
+step1: run command "npm i" to install the node modules
+step2: run command "npm start" to start the app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
