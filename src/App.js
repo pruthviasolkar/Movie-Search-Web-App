@@ -5,7 +5,7 @@ import MovieList from "./Components/MovieList";
 import MovieModal from "./Components/MovieModal.js";
 import "./App.css";
 
-const API_KEY = "e2592d0d"; // Replace with your OMDB API key
+const API_KEY = process.env.REACT_APP_OMDB_API_KEY; // Replace with your OMDB API key
 const API_URL = "http://www.omdbapi.com/";
 
 const App = () => {
@@ -23,9 +23,13 @@ const App = () => {
   };
 
   const fetchMovies = async (query) => {
-    if (!query) return;
-    const response = await axios.get(`${API_URL}?s=${query}&apikey=${API_KEY}`);
-    setMovies(response.data.Search || []);
+    try {
+      const response = await axios.get(`${API_URL}?s=${query}&apikey=${API_KEY}`);
+      console.log(response.data);
+      setMovies(response.data.Search || []);
+    } catch (error) {
+      console.error("Error fetching movies:", error);
+    }
   };
 
   const handleSearch = (query) => {
