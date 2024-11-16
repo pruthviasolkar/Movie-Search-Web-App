@@ -1,38 +1,92 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar input {
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+}
+.search-bar button{
+  padding-inline: 15px;
+  padding-block: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: #c11119;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.movie-card {
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+}
+
+.movie-card img {
+  width: 100%;
+}
+
+/* Modal overlay styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movieposter{
+  border-radius: 10px;
+  box-shadow: 0px 1px 10px rgba(245, 42, 42, 0.8), 
+              0px 1px 1px rgba(192, 13, 13, 0.6); /* Enhanced shadow for black background */
+}
+/* Modal content styling */
+/* Modal content styling with reduced height */
+.movie-modal {
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 70%; /* Reduce the height */
+  overflow-y: auto; /* Add scroll if content overflows */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.movie-modal img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.movie-modal button {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.movie-modal button:hover {
+  background: #0056b3;
+}
+.mainlogo{
+  width: 200px;
 }
