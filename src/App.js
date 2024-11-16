@@ -5,8 +5,8 @@ import MovieList from "./Components/MovieList";
 import MovieModal from "./Components/MovieModal.js";
 import "./App.css";
 
-const API_KEY = process.env.REACT_APP_OMDB_API_KEY; // Replace with your OMDB API key
-const API_URL = " http://www.omdbapi.com/";
+const API_KEY = "e2592d0d"; // Replace with your OMDB API key
+const API_URL = "http://www.omdbapi.com/";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
